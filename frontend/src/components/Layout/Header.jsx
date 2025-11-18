@@ -1,5 +1,13 @@
-import { Bell, Filter, Menu, Plus, Search, Sun } from "lucide-react";
-
+import {
+  Bell,
+  ChevronDown,
+  Filter,
+  Menu,
+  Plus,
+  Search,
+  Settings,
+  Sun,
+} from "lucide-react";
 
 function Header() {
   return (
@@ -67,9 +75,42 @@ function Header() {
             <Sun />
           </button>
           {/* Notification */}
-          <button>
+          <button
+            className="relative p-2.5 rounded-xl text-slate-600 dark:text-slate-300
+          hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          >
             <Bell className="w-5 h-5 text-slate-600 dark:text-slate-300 hover:text-slate-800" />
+            <span className="absolute -top-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
+              3
+            </span>
           </button>
+
+          {/* Settings */}
+
+          <button
+            className=" p-2.5 rounded-xl text-slate-600 dark:text-slate-300
+          hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          >
+            <Settings className="w-5 h-5 " />
+          </button>
+
+          {/* User Profile */}
+          <div className="flex items-center space-x-3 pl-3 border-l border-slate-200 dark:border-slate-700">
+            <img
+              alt="User"
+              src="https://scontent.fhre2-2.fna.fbcdn.net/v/t39.30808-6/546231787_4051913301725153_4995135265988131344_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=bZJffhYECJsQ7kNvwGf6ipX&_nc_oc=AdkqfR8XLTH13kQh1wKmM17vlDwxoLQUzzglpYN_LCGsL1q8i7CF8HKU0oH8KDw9z_Q&_nc_zt=23&_nc_ht=scontent.fhre2-2.fna&_nc_gid=tZoBsUJy3ja5oQVwyK4lQg&oh=00_Afi40FyHYaBUbGcb1d4_MJZZP0f7bCibB1Doi4sI7PdtUA&oe=6920DC69"
+              className="w-8 h-8 rounded-full ring-2 ring-blue-500"
+            />
+            <div className="hidden md:block">
+              <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
+                Lordshare Chida
+              </p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Adminstrator
+              </p>
+            </div>
+            <ChevronDown className="w-4 h-4 text-slate-400" />
+          </div>
         </div>
       </div>
     </div>
